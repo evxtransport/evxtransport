@@ -1,0 +1,619 @@
+/* ==========================================================================
+   EVX TRANSPORT - STYLESHEET (Tech Premium)
+   ========================================================================== */
+
+/* --- Custom Properties --- */
+:root {
+  /* EVX — Official Brand Colors */
+  --evx-black: #050606;
+  --evx-bg: #0B0C0C;
+  --evx-bg-secondary: #101212;
+
+  --evx-white: #F5F5F5;
+  --evx-text: #D9DDDE;
+  --evx-text-secondary: #8F9294;
+
+  --evx-cyan: #13E3F5;
+  --evx-cyan-dark: #0B5961;
+  --evx-cyan-deep: #092A2D;
+
+  --evx-border: #222728;
+
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+
+  /* Layout */
+  --section-padding: clamp(80px, 12vw, 160px);
+  --content-max-width: 960px;
+  --content-padding: clamp(24px, 5vw, 48px);
+
+  /* Effects */
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-medium: 0 15px 50px rgba(0, 0, 0, 0.35);
+  --cyan-glow: 0 0 25px rgba(19, 227, 245, 0.12);
+}
+
+/* --- Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--evx-text);
+  background-color: var(--evx-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  color: var(--evx-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cyan accent line under H2 */
+h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--evx-cyan);
+  margin-top: 14px;
+}
+
+h2.text-center {
+  align-items: center;
+}
+
+h2.text-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Auto-center the line for specific centered sections without modifying HTML classes in all places */
+.posicionamiento h2, .contacto h2 {
+  align-items: center;
+}
+.posicionamiento h2::after, .contacto h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--evx-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-cyan {
+  color: var(--evx-cyan);
+}
+
+/* --- Layout Structure --- */
+section {
+  padding: var(--section-padding) 0;
+}
+
+.section-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+/* --- Global Utilities --- */
+.thin-separator {
+  border-top: 1px solid var(--evx-border);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --- Animations --- */
+.fade-in {
+  opacity: 0;
+  will-change: opacity, transform, filter;
+}
+
+.fade-in.visible {
+  animation: fadeUpPremium 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUpPremium {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* --- Media Queries --- */
+@media (min-width: 768px) {
+  .servicio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .servicio-item-wide {
+    grid-column: 1 / -1;
+  }
+  
+  .cobertura-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contacto-actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+  
+  .btn-contacto {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicio-item, .cobertura-item {
+    padding: 3rem;
+  }
+}
+
+/* --- 1. Hero Section --- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--section-padding) 0;
+  background-color: var(--evx-black);
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.logo-evx {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: var(--evx-white);
+}
+
+.logo-line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--evx-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.logo-descriptor {
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--evx-text-secondary);
+}
+
+.manifesto {
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--evx-white);
+}
+
+.hero-h1 {
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: var(--evx-text-secondary);
+}
+
+/* --- 2. Posicionamiento --- */
+.posicionamiento {
+  text-align: center;
+}
+
+.posicionamiento .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posicionamiento p {
+  max-width: 600px;
+  color: var(--evx-text-secondary);
+}
+
+/* --- 3. Vehículo --- */
+.vehiculo .section-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehiculo-slider {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--evx-border);
+  background-color: var(--evx-bg-secondary);
+  aspect-ratio: 16/9;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.vehiculo-track {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  animation: slideShow 12s infinite cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+.vehiculo-slide {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.vehiculo-slide.exterior-bg {
+  background-color: #ffffff;
+}
+
+.vehiculo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slideShow {
+  0%, 40% {
+    transform: translateX(0);
+  }
+  50%, 90% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.vehiculo-caption {
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: var(--evx-text-secondary);
+}
+
+/* --- 4. Servicio --- */
+.servicio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.servicio-item {
+  background: var(--evx-bg-secondary);
+  border: 1px solid var(--evx-border);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.servicio-item h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--evx-white);
+}
+
+.servicio-item p {
+  color: var(--evx-text-secondary);
+  font-size: 0.9rem;
+}
+
+.servicio-item:hover {
+  border-color: var(--evx-cyan-dark);
+  box-shadow: var(--cyan-glow);
+  transform: translateY(-2px);
+}
+
+.servicio-nota {
+  margin-top: 4rem;
+  font-weight: 300;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--evx-text-secondary);
+}
+
+/* --- 5. Cobertura --- */
+.cobertura-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.cobertura-item {
+  background-color: var(--evx-bg-secondary);
+  background-image: linear-gradient(rgba(11, 12, 12, 0.88), rgba(5, 6, 6, 0.98)), var(--card-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--evx-border);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.cobertura-caba { --card-bg: url('assets/mapa-caba.jpg'); }
+.cobertura-ezeiza { --card-bg: url('assets/torre-ezeiza.png'); }
+.cobertura-aeroparque { --card-bg: url('assets/aeroparque-costa.jpg'); }
+.cobertura-rosario { --card-bg: url('assets/monumento-bandera.jpg'); }
+.cobertura-costa { --card-bg: url('assets/faro-mdp.jpg'); }
+
+.cobertura-item h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: var(--evx-white);
+  position: relative;
+  z-index: 1;
+}
+
+.cobertura-item p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cobertura-item:hover {
+  background-image: linear-gradient(rgba(11, 12, 12, 0.65), rgba(5, 6, 6, 0.85)), var(--card-bg, none);
+  border-color: var(--evx-cyan-dark);
+  box-shadow: var(--cyan-glow);
+  transform: translateY(-2px);
+}
+
+/* --- 6. Contacto --- */
+.contacto {
+  text-align: center;
+}
+
+.contacto .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto p {
+  margin-bottom: 3rem;
+  max-width: 600px;
+  color: var(--evx-text-secondary);
+}
+
+.contacto-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn-contacto {
+  display: inline-block;
+  border: 1px solid transparent;
+  background-color: var(--evx-cyan);
+  color: var(--evx-black);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-contacto:hover {
+  background-color: var(--evx-white);
+  color: var(--evx-black);
+  box-shadow: var(--cyan-glow);
+  transform: translateY(-1px);
+}
+
+/* --- 7. Footer --- */
+.footer {
+  padding: 3rem 0;
+  padding-bottom: 5rem;
+  text-align: center;
+  background-color: var(--evx-black);
+  border-top: 1px solid var(--evx-border);
+}
+
+.footer p {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--evx-text-secondary);
+}
+
+/* --- CTA Inline (after posicionamiento) --- */
+.cta-inline {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--evx-cyan);
+  border-bottom: 1px solid var(--evx-cyan-dark);
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.cta-inline:hover {
+  color: var(--evx-white);
+  border-bottom-color: var(--evx-white);
+}
+
+/* --- Vehicle Specs List --- */
+.vehiculo-specs {
+  list-style: none;
+  margin-top: 2rem;
+  border-top: 1px solid var(--evx-border);
+}
+
+.vehiculo-specs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--evx-border);
+}
+
+.spec-label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--evx-text-secondary);
+}
+
+.spec-value {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--evx-white);
+  text-align: right;
+}
+
+/* --- 6. FAQ --- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--evx-border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--evx-border);
+}
+
+.faq-question {
+  padding: 1.5rem 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--evx-white);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--evx-cyan);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-question:hover {
+  color: var(--evx-cyan);
+}
+
+.faq-answer {
+  padding: 0 0 1.5rem 0;
+  color: var(--evx-text-secondary);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* --- CTA Fijo Mobile --- */
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--evx-cyan);
+    color: var(--evx-black);
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .footer {
+    padding-bottom: 6rem;
+  }
+}
