@@ -155,6 +155,19 @@ src="https://www.facebook.com/tr?id=940180335826314&ev=PageView&noscript=1"
   </script>
 </head>
 <body>
+<nav class="evx-nav" id="evx-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">EVX</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#servicio" class="nav-link">Servicio</a>
+      <a href="#cobertura" class="nav-link">Cobertura</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menú" aria-controls="nav-links" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
   <main>
     <!-- 1. HERO SECTION -->
     <section class="hero" id="hero" aria-label="Hero EVX Transport">
@@ -164,7 +177,7 @@ src="https://www.facebook.com/tr?id=940180335826314&ev=PageView&noscript=1"
           <div class="logo-line"></div>
           <span class="logo-descriptor">EXECUTIVE TRANSPORT</span>
         </div>
-        <p class="manifesto">Otra forma de moverse.</p>
+        <p class="manifesto"><span class="manifesto-line manifesto-line-1">Otra forma</span><span class="manifesto-line manifesto-line-2">de moverse.</span></p>
         <h1 class="hero-h1">Traslado ejecutivo <span class="text-cyan">de Nueva Energía</span> en Buenos Aires</h1>
       </div>
     </section>
@@ -174,25 +187,28 @@ src="https://www.facebook.com/tr?id=940180335826314&ev=PageView&noscript=1"
       <div class="section-inner">
         <h2 class="text-center">Traslados ejecutivos con Vehículos de Nueva Energía.</h2>
         <p>Traslados ejecutivos para quienes valoran llegar a tiempo, viajar con privacidad y moverse con comodidad.<br><br>Operamos con Vehículos de Nueva Energía, con una logística planificada para cada servicio.</p>
-        <a href="#contacto" class="cta-inline">Reservá tu traslado →</a>
       </div>
     </section>
 
-    //<!-- 3. VEHÍCULO — OCULTO TEMPORALMENTE (descomentar para volver a mostrar)
-    <section class="vehiculo fade-in" id="vehiculo" aria-label="Nuestros vehículos">
-      <div class="section-inner">
-        <h2>Vehículos de Nueva Energía</h2>
-        <div class="vehiculo-slider">
-          <div class="vehiculo-track">
-            <div class="vehiculo-slide exterior-bg">
-              <img src="assets/vehiculo-electrico-traslado-ejecutivo.jpg" alt="Vehículo de Nueva Energía para traslado ejecutivo en Buenos Aires — vista exterior" class="vehiculo-img">
-            </div>
-            <div class="vehiculo-slide">
-              <img src="assets/interior-vehiculo-electrico-premium.jpg" alt="Interior ejecutivo del vehículo de nueva energía EVX Transport — asientos y consola" class="vehiculo-img">
-            </div>
-          </div>
-        </div>
-        <p class="vehiculo-caption">Sedán de Nueva Energía · Movilidad sustentable · 430 litros de baúl</p>
+<!-- Nueva Energía -->
+<section class="nueva-energia" id="nueva-energia" aria-label="Nueva Energía">
+  <div class="section-inner ne-inner">
+    <div class="ne-word fade-in">Silencio.</div>
+    <div class="ne-word fade-in">Tecnología.</div>
+    <div class="ne-word fade-in">Eficiencia.</div>
+    <div class="ne-word fade-in">Confort.</div>
+    <div class="ne-word ne-word-accent fade-in">Otra forma de moverse.</div>
+  </div>
+</section>
+
+<!-- 3. VEHÍCULO -->
+<section class="vehiculo fade-in" id="vehiculo" aria-label="Nuestros vehículos">
+  <div class="section-inner">
+    <h2>La experiencia a bordo</h2>
+    <div class="vehiculo-detalle">
+      <p class="vehiculo-experiencia">Silencio de marcha. Climatización óptima. Espacio pensado para trabajar o descansar durante el traslado.</p>
+      <details class="vehiculo-specs-toggle">
+        <summary class="vehiculo-specs-label">Especificaciones técnicas</summary>
         <ul class="vehiculo-specs">
           <li><span class="spec-label">Motorización</span><span class="spec-value">Nueva Energía (NEV)</span></li>
           <li><span class="spec-label">Eficiencia</span><span class="spec-value">Alta sustentabilidad</span></li>
@@ -200,38 +216,57 @@ src="https://www.facebook.com/tr?id=940180335826314&ev=PageView&noscript=1"
           <li><span class="spec-label">Airbags</span><span class="spec-value">6</span></li>
           <li><span class="spec-label">Seguridad</span><span class="spec-value">ESP · TCS · ABS+EBD</span></li>
         </ul>
-      </div>
-    </section>
-    -->//
+      </details>
+    </div>
+  </div>
+  <figure class="vehiculo-visual">
+    <img src="assets/butacas-traseras-nueva-energia.png" alt="Butacas traseras del vehículo de nueva energía EVX Transport" class="vehiculo-img-hero" loading="lazy">
+  </figure>
+</section>
 
     <!-- 4. SERVICIO -->
-    <section class="servicio fade-in" id="servicio" aria-label="Servicios">
-      <div class="section-inner">
-        <h2>Un servicio pensado para ejecutivos</h2>
-        <div class="servicio-grid">
-          <div class="servicio-item">
-            <h3>Puntualidad</h3>
-            <p>Coordinamos cada servicio con anticipación para que la unidad esté donde tiene que estar, cuando tiene que estar.</p>
-          </div>
-          <div class="servicio-item">
-            <h3>Confidencialidad</h3>
-            <p>Un servicio pensado para viajar con tranquilidad y privacidad.</p>
-          </div>
-          <div class="servicio-item">
-            <h3>Nueva Energía</h3>
-            <p>Conducción silenciosa y tecnología sustentable durante el servicio.</p>
-          </div>
-          <div class="servicio-item">
-            <h3>Seguimiento operativo</h3>
-            <p>Coordinamos horarios, rutas y vuelos para anticiparnos a posibles cambios.</p>
-          </div>
-          <div class="servicio-item servicio-item-wide">
-            <h3>Seguridad</h3>
-            <p>Vehículos equipados con 6 airbags, control de estabilidad, control de tracción y sistema ABS+EBD.</p>
-          </div>
+<section class="servicio fade-in" id="servicio" aria-label="Servicios">
+  <div class="section-inner">
+    <h2>Un servicio pensado para ejecutivos</h2>
+    <div class="servicio-list">
+      <div class="servicio-item">
+        <span class="servicio-number">01</span>
+        <div class="servicio-content">
+          <h3>Puntualidad</h3>
+          <p>Coordinamos cada servicio con anticipación para que la unidad esté donde tiene que estar, cuando tiene que estar.</p>
         </div>
       </div>
-    </section>
+      <div class="servicio-item">
+        <span class="servicio-number">02</span>
+        <div class="servicio-content">
+          <h3>Confidencialidad</h3>
+          <p>Un servicio pensado para viajar con tranquilidad y privacidad.</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <span class="servicio-number">03</span>
+        <div class="servicio-content">
+          <h3>Nueva Energía</h3>
+          <p>Conducción silenciosa y tecnología sustentable durante el servicio.</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <span class="servicio-number">04</span>
+        <div class="servicio-content">
+          <h3>Seguimiento operativo</h3>
+          <p>Coordinamos horarios, rutas y vuelos para anticiparnos a posibles cambios.</p>
+        </div>
+      </div>
+      <div class="servicio-item">
+        <span class="servicio-number">05</span>
+        <div class="servicio-content">
+          <h3>Seguridad</h3>
+          <p>Vehículos equipados con 6 airbags, control de estabilidad, control de tracción y sistema ABS+EBD.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- 5. COBERTURA -->
     <section class="cobertura fade-in" id="cobertura" aria-label="Zonas de Cobertura">
@@ -288,23 +323,34 @@ src="https://www.facebook.com/tr?id=940180335826314&ev=PageView&noscript=1"
     </section>
 
     <!-- 7. CONTACTO -->
-    <section class="contacto fade-in" id="contacto" aria-label="Contacto">
-      <div class="section-inner">
-        <h2>Reservá tu traslado</h2>
-        <p>Coordiná tu servicio directamente con EVX.</p>
-        <div class="contacto-actions">
-          <a class="btn-contacto" href="https://wa.me/5491138073989" target="_blank" rel="noopener">Consultar disponibilidad</a>
-        </div>
-      </div>
-    </section>
+<section class="contacto fade-in" id="contacto" aria-label="Contacto">
+  <div class="section-inner">
+    <p class="contacto-brand">Otra forma de moverse.</p>
+    <h2>Reservá tu traslado</h2>
+    <p>Coordiná tu servicio directamente con EVX.</p>
+    <div class="contacto-actions">
+      <a class="btn-contacto" href="https://wa.me/5491138073989" target="_blank" rel="noopener">Consultar disponibilidad</a>
+    </div>
+  </div>
+</section>
   </main>
 
   <!-- 8. FOOTER -->
-  <footer class="footer">
-    <div class="section-inner">
-      <p>© 2026 EVX Transport. Todos los derechos reservados.</p>
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <p>© 2026 EVX Transport. Todos los derechos reservados.</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/evx.transport" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+
+<!-- CTA flotante desktop -->
+<a href="https://wa.me/5491138073989" target="_blank" rel="noopener" class="desktop-cta" id="desktop-cta" aria-label="Consultar disponibilidad">
+  Consultar disponibilidad
+</a>
 
   <!-- CTA fijo en móvil -->
   <a href="https://wa.me/5491138073989" target="_blank" rel="noopener" class="mobile-cta" aria-label="Contactar por WhatsApp">
