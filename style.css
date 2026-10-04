@@ -893,6 +893,10 @@ section {
 }
 
 @media (max-width: 767px) {
+  .ne-inner {
+    gap: 3rem;
+  }
+
   .hero {
     min-height: 82vh;
     min-height: 82svh;
