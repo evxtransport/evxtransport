@@ -893,6 +893,20 @@ section {
 }
 
 @media (max-width: 767px) {
+  .hero {
+    min-height: 82vh;
+    min-height: 82svh;
+  }
+
+  .posicionamiento {
+    padding-top: 48px;
+  }
+
+  .posicionamiento::before {
+    height: 56px;
+    margin-bottom: 1.75rem;
+  }
+
   .mobile-cta {
     display: block;
     position: fixed;
