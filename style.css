@@ -286,6 +286,19 @@ section {
   }
 }
 
+@keyframes nuevaEnergiaRevealMobile {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 /* --- Media Queries --- */
 @media (min-width: 768px) {
   .cobertura-grid {
@@ -897,9 +910,13 @@ section {
     gap: 3rem;
   }
 
+  .has-scroll-animations .nueva-energia .ne-word.fade-in.visible {
+    animation: nuevaEnergiaRevealMobile 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
   .hero {
-    min-height: 82vh;
-    min-height: 82svh;
+    min-height: 70vh;
+    min-height: 70svh;
   }
 
   .posicionamiento {
